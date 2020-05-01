@@ -1,0 +1,69 @@
+h1{
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Acme', sans-serif;
+}
+h2{
+    color: rgb(193, 238, 240);
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Indie Flower', cursive;
+
+    
+}
+h3{
+    color: rgb(193, 238, 240);
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+    
+}
+
+img{
+    border: rgb(184, 211, 224) 5px solid;
+    
+    
+}
+h4{
+    color: rgb(193, 238, 240);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Indie Flower', cursive;
+}
+li{
+    color:  rgb(193, 238, 240);
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Indie Flower', cursive;
+}
+h5{
+    color:  rgb(193, 238, 240);
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Indie Flower', cursive;
+}
+body{
+    /*background-color: rgba(18, 2, 48, 0.925)*/ 
+    background-image: url(../img/ahre.jpg);
+
+
+}
+
+h6{
+    color:  rgb(193, 238, 240);
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Indie Flower', cursive;
+}
+a{
+    color: rgb(197, 233, 168);
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.centrado{
+    text-align: center;
+    
+}
