@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+ <script defer src="scripts.js"></script>
+    <title>Trivia</title>
+</head>
+
+
+
+<body>
+    
+				<hr>
+				<p id="pregunta"></p>
+				<input type="text" id="dato">
+				<button id="boton" class="btn btn-outline-dark">Siguiente</button>
+				<br>
+				<h3 id="resolucion"></h3>
+				<br>
+				<a href="../index.html"><button class="btn btn-outline-dark">Volver a la página principal ☜</button></a>  
+		
+	<script>
+		
+
+		var preguntas = [																			
+				['<h3>Cómo se hundió el Titanic?</h3> <br> A: Por una falla mecánica  <br> B: Por un glacial <br> C: Por amor <br> D: Por un ataque terrorista', 'b'],       
+				['<h3>Cómo se llama la hija más pequeña de Homero y Marge?</h3> <br> A: Maggie <br> B: Lisa <br> C: Maggs <br> D: Lucy', 'a'],															
+				['<h3>Cuál de éstos mamíferos pone huevos?</h3> <br> A: Ballena <br> B: Murciélago <br> C: Erizo <br> D: Equidna', 'd'],                
+				['<h3>Cuál es el juego con mayores espectadores en Twitch actualmente?</h3> <br> A: Fortnite <br> B: World of Warcraft <br> C: League of Legends <br> D: Counter Strike', 'c'],									
+				['<h3>Cuántas lunas tiene júpiter?</h3> <br> A: 18 <br> B: 34 <br> C: 64 <br> D: 79', 'd'],
+			    ],
+			pregunta, respuesta,
+			formuladas = 0,
+			acertadas = 0;
+
+
+		hazPregunta();
+
+
+		document.getElementById('boton').addEventListener('click', function(){
+			var entrada = document.getElementById("dato").value;
+
+			if(entrada == respuesta){
+				acertadas++;
+			}
+
+			if(formuladas < 5){			
+				hazPregunta();			
+			}
+			else{						
+				muestraResultado();		
+			}
+		});
+
+		function hazPregunta(){
+			var e;			
+			e = preguntas.splice( numAleat(0, preguntas.length-1), 1 );
+			pregunta = e[0][0];			
+			respuesta = e[0][1];
+
+			document.getElementById('pregunta').innerHTML = pregunta;        
+			document.getElementById('dato').value = '';                  
+
+			formuladas++;
+		}
+
+		function muestraResultado(){
+            var resultado = "<br> Acertaste: " + acertadas + " de 5! ";      
+            document.getElementById('resolucion').innerHTML = resultado;
+		}
+
+
+		function numAleat(min, max){
+			return Math.floor( Math.random() * (max - min + 1) ) + min;
+        }
+        
+	</script>
+	
+
+
+
+</body>
+</html>
